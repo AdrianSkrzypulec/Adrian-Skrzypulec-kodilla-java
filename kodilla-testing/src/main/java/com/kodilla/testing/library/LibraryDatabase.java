@@ -18,3 +18,4 @@ public interface LibraryDatabase {
     // returns number of books returned back
     int returnBooks(LibraryUser libraryUser);
 }
+
