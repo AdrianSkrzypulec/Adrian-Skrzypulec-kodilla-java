@@ -15,6 +15,7 @@ import static org.mockito.Mockito.*;
 
 
 @ExtendWith(MockitoExtension.class)
+
 @DisplayName("TDD: Book Directory Test Suite")
 class BookDirectoryTestSuite {
     private static int testCounter = 0;
@@ -163,7 +164,3 @@ class BookDirectoryTestSuite {
         }
     }
 }
-
-
-
-
