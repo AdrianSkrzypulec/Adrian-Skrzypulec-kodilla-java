@@ -11,12 +11,12 @@ public class StreamMain {
 
     public static void main(String[] args) {
 
-        LocalDate currentDateMinus20Years = LocalDate.now().minusYears(20);
+    //    LocalDate currentDateMinus20Years = LocalDate.now().minusYears(20);
 
         Forum theForumUsers = new Forum();
         Map<Integer, ForumUser> theResultofFurumUsers = theForumUsers.getUserList().stream()
                 .filter(user -> user.getSex() == 'M')
-                .filter(user -> user.getDateOfBirth().getYear() < currentDateMinus20Years.getYear())
+                .filter(user -> user.getDateOfBirth().getYear() < LocalDate.now().minusYears(20).getYear())
                 .filter(user -> user.getPostQuantify() >= 1)
                 .collect(Collectors.toMap(ForumUser::getUserId, user -> user));
 
