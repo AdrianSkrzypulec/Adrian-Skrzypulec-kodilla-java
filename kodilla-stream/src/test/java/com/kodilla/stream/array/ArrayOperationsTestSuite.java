@@ -1,6 +1,10 @@
 package com.kodilla.stream.array;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,7 +14,7 @@ public class ArrayOperationsTestSuite {
     void testGetAverage() {
 
         //Given
-        int[] numbers = new int[9];
+        int[] numbers = new int[20];
         numbers[0] = 0;
         numbers[1] = 1;
         numbers[2] = 2;
@@ -20,11 +24,34 @@ public class ArrayOperationsTestSuite {
         numbers[6] = 6;
         numbers[7] = 7;
         numbers[8] = 8;
+        numbers[9] = 9;
+        numbers[10] = 10;
+        numbers[11] = 11;
+        numbers[12] = 12;
+        numbers[13] = 13;
+        numbers[14] = 14;
+        numbers[15] = 15;
+        numbers[16] = 16;
+        numbers[17] = 17;
+        numbers[18] = 18;
+        numbers[19] = 19;
 
         //When
         double expectetAverage = ArrayOperations.getAverage(numbers);
 
         //Then
-        assertEquals(4.0, expectetAverage);
+        assertEquals(9.5, expectetAverage);
+    }
+
+    @Test
+    void testEmptyArray(){
+        //Given
+        int[] numbers = new int[20];
+
+        //When
+        double expectetAverage = ArrayOperations.getAverage(numbers);
+
+        //Then
+        assertEquals(0, expectetAverage);
     }
 }
