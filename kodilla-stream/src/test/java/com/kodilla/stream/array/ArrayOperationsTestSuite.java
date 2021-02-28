@@ -1,12 +1,12 @@
 package com.kodilla.stream.array;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.OptionalDouble;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayOperationsTestSuite {
 
@@ -46,12 +46,13 @@ public class ArrayOperationsTestSuite {
     @Test
     void testEmptyArray(){
         //Given
-        int[] numbers = new int[20];
+        int[] numbers = new int[0];
 
         //When
         double expectetAverage = ArrayOperations.getAverage(numbers);
 
         //Then
-        assertEquals(0, expectetAverage);
+        assertEquals(OptionalDouble.empty(), expectetAverage);
+//        assertEquals(OptionalDouble.empty(), expectetAverage);
     }
 }

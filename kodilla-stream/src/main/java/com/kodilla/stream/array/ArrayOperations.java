@@ -1,5 +1,6 @@
 package com.kodilla.stream.array;
 
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 public interface ArrayOperations {
@@ -14,7 +15,6 @@ public interface ArrayOperations {
                 .map(number -> numbers[number])
                 .average()
                 .getAsDouble();
-
         return numberArray;
     }
 }
