@@ -14,7 +14,7 @@ public interface ArrayOperations {
         double numberArray = IntStream.range(0, numbers.length)
                 .map(number -> numbers[number])
                 .average()
-                .getAsDouble();
+                .orElse(0);
         return numberArray;
     }
 }

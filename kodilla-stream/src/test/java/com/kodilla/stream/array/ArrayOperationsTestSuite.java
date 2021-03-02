@@ -52,7 +52,7 @@ public class ArrayOperationsTestSuite {
         double expectetAverage = ArrayOperations.getAverage(numbers);
 
         //Then
-        assertEquals(OptionalDouble.empty(), expectetAverage);
+        assertEquals(0, expectetAverage);
 //        assertEquals(OptionalDouble.empty(), expectetAverage);
     }
 }
