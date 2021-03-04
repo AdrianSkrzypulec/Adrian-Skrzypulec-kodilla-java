@@ -53,6 +53,5 @@ public class ArrayOperationsTestSuite {
 
         //Then
         assertEquals(0, expectetAverage);
-//        assertEquals(OptionalDouble.empty(), expectetAverage);
     }
 }
