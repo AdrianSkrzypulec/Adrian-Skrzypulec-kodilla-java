@@ -16,7 +16,7 @@ public class FindFilght {
         String depature = flight.getDepartureAirport();
 
         if (flightMap.containsKey(arrival) && flightMap.containsKey(depature) &&
-                flightMap.getOrDefault(arrival, true) && flightMap.getOrDefault(depature, true)) {
+                flightMap.get(arrival) && flightMap.get(depature)) {
             return true;
         }
         else {
