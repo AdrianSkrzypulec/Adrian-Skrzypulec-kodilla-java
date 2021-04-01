@@ -11,7 +11,11 @@ public class StreamMain {
 
     public static void main(String[] args) {
 
-    //    LocalDate currentDateMinus20Years = LocalDate.now().minusYears(20);
+
+
+
+//-----------------------------------------------------------------------------------
+//    //    LocalDate currentDateMinus20Years = LocalDate.now().minusYears(20);
 
         Forum theForumUsers = new Forum();
         Map<Integer, ForumUser> theResultofFurumUsers = theForumUsers.getUserList().stream()
@@ -23,7 +27,6 @@ public class StreamMain {
                 theResultofFurumUsers.entrySet().stream()
                         .forEach(System.out::println);
 
-
 //        napisz program, który:
 //        zainicjuje strumień Stream przy pomocy metody stream() kolekcji
 //        odfiltruje tylko tych użytkowników, którzy są mężczyznami,
@@ -31,7 +34,6 @@ public class StreamMain {
 //        odfiltruje tylko tych użytkowników, którzy mają co najmniej jeden opublikowany post,
 //        przy pomocy kolektora utworzy mapę par, w której rolę klucza będzie pełnił unikalny identyfikator użytkownika,
 //        wyświetli otrzymaną mapę wynikową.
-
 //------------------------------------------------------------------------------------
 //        BookDirectory theBookDirectory = new BookDirectory();
 //        String theResultStringOfBooks = theBookDirectory.getList().stream()
