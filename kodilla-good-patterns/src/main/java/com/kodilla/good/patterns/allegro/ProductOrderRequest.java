@@ -2,9 +2,9 @@ package com.kodilla.good.patterns.allegro;
 
 public class ProductOrderRequest {
 
-    User user;
-    Product product;
-    int quantity;
+    private User user;
+    private Product product;
+    private int quantity;
 
 
     public ProductOrderRequest(User user, Product product, int quantity) {

@@ -2,9 +2,9 @@ package com.kodilla.good.patterns.allegro;
 
 public class User {
 
-    String name;
-    String surName;
-    String userName;
+    private String name;
+    private String surName;
+    private String userName;
 
     public User(String name, String surName, String userName) {
         this.name = name;
