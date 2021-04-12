@@ -16,35 +16,35 @@ class CalculatorTestSuite {
     void testAdd() {
         //Given
         //When
-        calculator.add(5, 2);
+        double result = calculator.add(5, 2);
         //Then
-        //do nothing
+        Assertions.assertEquals(7, result);
     }
 
     @Test
     void testSub() {
         //Given
         //When
-        calculator.sub(3, 2);
+        double result = calculator.sub(3, 2);
         //Then
-        //do nothing
+        Assertions.assertEquals(1, result);
     }
 
     @Test
     void testMul() {
         //Given
         //When
-        calculator.mul(2, 2);
+        double result = calculator.mul(2, 2);
         //Then
-        //do nothing
+        Assertions.assertEquals(4, result);
     }
 
     @Test
     void testDiv() {
         //Given
         //When
-        calculator.div(4, 2);
+        double result = calculator.div(4, 2);
         //Then
-        //do nothing
+        Assertions.assertEquals(2, result);
     }
 }
