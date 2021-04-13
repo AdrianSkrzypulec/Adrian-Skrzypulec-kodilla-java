@@ -1,6 +1,5 @@
-package com.kodilla.calculator;
+package com.kodilla.spring.calculator;
 
-import com.kodilla.spring.calculator.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
