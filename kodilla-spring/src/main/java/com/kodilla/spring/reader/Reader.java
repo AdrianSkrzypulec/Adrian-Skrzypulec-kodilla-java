@@ -9,6 +9,6 @@ public final class Reader {
     }
 
     public void read() {
-        System.out.println("Reading :" + theBook.getTitle());
+        System.out.println("Reading: " + theBook.getTitle());
     }
 }
