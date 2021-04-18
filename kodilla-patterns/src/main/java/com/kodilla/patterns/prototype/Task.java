@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public final class Task {
 
-    private final String name;
+    protected final String name;
 
     public Task(final String name) {
         this.name = name;
