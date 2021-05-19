@@ -1,0 +1,11 @@
+{
+"carName":"Pahntom",
+"carProducer":"Izera",
+	"chairs":[
+		{"name":"chair0","material":"velur", "color":"white"},
+		{"name":"chair1","material":"leather", "color":"black"},
+		{"name":"chair2","material":"velur", "color":"grey"},
+		{"name":"chair3","material":"leather", "color":"pink"},
+],
+"engineCapablity":0.00
+}
