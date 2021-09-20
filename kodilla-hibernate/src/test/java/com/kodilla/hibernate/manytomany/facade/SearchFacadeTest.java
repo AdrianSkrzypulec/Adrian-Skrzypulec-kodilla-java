@@ -2,6 +2,8 @@ package com.kodilla.hibernate.manytomany.facade;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
+import com.kodilla.hibernate.manytomany.dao.CompanyDao;
+import com.kodilla.hibernate.manytomany.dao.EmploeeDao;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,6 +18,12 @@ class SearchFacadeTest {
 
     @Autowired
     private SearchFacade searchFacade;
+
+    @Autowired
+    private CompanyDao companyDao;
+
+    @Autowired
+    private EmploeeDao emploeeDao;
 
     @Test
     void searchFacadeTest() {
@@ -42,13 +50,23 @@ class SearchFacadeTest {
         lindaKovalsky.getCompanies().add(greyMatter);
 
         //When
+        companyDao.save(softwareMachine);
+        companyDao.save(dataMaesters);
+        companyDao.save(greyMatter);
 
-        List<Employee> employee = searchFacade.retrieveEmployeeLike("Smith");
+        List<Employee> employee = searchFacade.retrieveEmployeeLike("Smi");
         List<Company> company = searchFacade.retrieveCompanyLike("sof");
 
         //Then
         assertEquals(1, employee.size());
         assertEquals(1, company.size());
 
+        //CleanUp
+        try {
+            companyDao.deleteAll();
+            emploeeDao.deleteAll();
+        } catch (Exception e) {
+            //do nothing
+        }
     }
 }
